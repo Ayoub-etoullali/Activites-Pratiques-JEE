@@ -4,7 +4,7 @@
 ## (1) Inversion de contrôle et Injection des dépendances
 
 
-![](https://drive.google.com/file/d/17k-9t56d9onLAKN0EiiMlUhorvbhvL0B/view)
+![](ayoub.jpg)
   
 ###### Ayoub ETOULLALI
 ###### Élève ingénieur en Ingénierie Informatique Big Data & Cloud Computing
