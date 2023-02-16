@@ -4,19 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c50edc-f58a-4a28-8980-7e766f20dae2" name="Changes" comment="" />
+    <list default="true" id="70e8dbb8-7857-440a-b2ab-fa970e51402d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../test1/src/main/java/metier/IMetier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Calcule Matricie/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Calcule Matricie/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Calcule Matricie/matrices.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../Calcule Matricie/matrices.h" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2LpX87rK37ZuhFwOuqdEerz74Sx" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2LmLJGEP5gE01nDfGlkOGFSM3lc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,19 +54,38 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/pc/Desktop/ENSET/S4/JEE/Tests/test2-Maven/src/main/java/ma/enset",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "ef1f6e9a1868b5cf9c978a672f77f566",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "4d454b45094be6e9d3166ba2a2559291",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Presentation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ma.enset.pres.Presentation" />
-      <module name="code source" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven\src\main\java\ma\enset" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven" />
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven\src\main\resources" />
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven\src" />
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven\src\main\java" />
+      <recent name="C:\Users\pc\Desktop\ENSET\S4\JEE\Tests\test2-Maven\src\main" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CalculTest.testSomme">
+    <configuration name="PresSpringAnnotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ma.enset.pres.PresSpringAnnotation" />
+      <module name="test2-Maven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ma.enset.pres.*" />
@@ -49,25 +96,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PresSpringXML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ma.enset.pres.PresSpringXML" />
+      <module name="test2-Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.enset.pres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Présentation2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ma.enset.pres.Présentation2" />
+      <module name="test2-Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.enset.pres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculTest.testSomme" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test2-Maven" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalculTest" />
+      <option name="METHOD_NAME" value="testSomme" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Presentation" />
+        <item itemvalue="JUnit.CalculTest.testSomme" />
+        <item itemvalue="Application.Présentation2" />
+        <item itemvalue="Application.PresSpringAnnotation" />
+        <item itemvalue="Application.PresSpringXML" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a3c50edc-f58a-4a28-8980-7e766f20dae2" name="Changes" comment="" />
-      <created>1676568849923</created>
+      <changelist id="70e8dbb8-7857-440a-b2ab-fa970e51402d" name="Changes" comment="" />
+      <created>1676471238908</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1676568849923</updated>
-      <workItem from="1676568854522" duration="4289000" />
+      <updated>1676471238908</updated>
+      <workItem from="1676471243667" duration="2016000" />
+      <workItem from="1676473370932" duration="395000" />
+      <workItem from="1676473870629" duration="130000" />
+      <workItem from="1676474062457" duration="512000" />
+      <workItem from="1676475168492" duration="1559000" />
+      <workItem from="1676476804825" duration="398000" />
+      <workItem from="1676477324504" duration="10010000" />
+      <workItem from="1676567118986" duration="604000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

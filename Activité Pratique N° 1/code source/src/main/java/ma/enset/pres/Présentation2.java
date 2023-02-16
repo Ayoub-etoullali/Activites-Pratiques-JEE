@@ -7,7 +7,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
-public class Presentation2 {
+public class Présentation2 {
     public static void main(String[] args) throws  Exception {
 
         Scanner scanner=new Scanner(new File("config.txt"));
@@ -22,7 +22,8 @@ public class Presentation2 {
         IMetier metier = (IMetier) cMetier.newInstance();
 
         Method method= cMetier.getMethod("setDao", IDao.class);
-        method.invoke(metier,dao);
+        // metier.setDao(dao); => satatique
+        method.invoke(metier,dao); //j'invoke (exécute) la méthode setDao sur l'objet "metier" en transformer en paramètre "dao" =>dynamique
         System.out.println ("Résultats="+metier.calcul() );
     }
 }

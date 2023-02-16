@@ -8,9 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class PresSpringAnnotation {
     public static void main(String[] args) {
 
-        ApplicationContext context=new AnnotationConfigApplicationContext("ma");
+        ApplicationContext context=new AnnotationConfigApplicationContext("ma"); //"ma" c'est le base package [("dao","metier");]
 
         IMetier metier=context.getBean(IMetier.class);
-        System.out.println("Resultats = "+metier.calcul());
+        System.out.println("Resultats="+metier.calcul());
+
+
     }
 }
