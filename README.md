@@ -14,9 +14,9 @@
    ##### b. Par instanciation dynamique   
       ![](Activité%20Pratique%20N°%201/images/3.b..jpg)
    ##### c. En utilisant le Framework Spring
-      ###### - Version XML
+      - Version XML
       ![](Activité%20Pratique%20N°%201/images/3.c.1..jpg)
-      ###### - Version annotations
+      - Version annotations
       ![](Activité%20Pratique%20N°%201/images/3.c.2..jpg)
               
 #### Partie 2 : Mini Projet (Framework Injection des dépendance)
