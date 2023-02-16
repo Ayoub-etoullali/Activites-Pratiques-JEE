@@ -1,5 +1,5 @@
-# Activité Pratique 👨🏻‍💻
-![](https://miro.medium.com/max/647/1*PBTTH5RGrfT1RBXxr989XQ.png)
+# Activité Pratique 
+👨🏻‍💻 ![](https://miro.medium.com/max/647/1*PBTTH5RGrfT1RBXxr989XQ.png)
 
 
 
@@ -25,4 +25,3 @@
 
 
 ![Logo ENSET](Activité%20Pratique%20N°%201/images/LOGO%20ENSET.png)
-###### Activites-Pratiques-JEE
