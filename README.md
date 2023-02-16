@@ -9,6 +9,7 @@
 2. Créer l'interface IMetier avec une méthode calcul + implémentation en utilisant le couplage faible
 ![](Activité%20Pratique%20N°%201/images/2.jpg)
 3. Faire l'injection des dépendances          
+       
        a. Par instanciation statique
        ![](Activité%20Pratique%20N°%201/images/3.a..jpg)
        b. Par instanciation dynamique   
