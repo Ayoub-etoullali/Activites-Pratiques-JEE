@@ -1,9 +1,6 @@
-# Activité Pratique 👨🏻‍💻
-![](https://miro.medium.com/max/647/1*PBTTH5RGrfT1RBXxr989XQ.png)
+# (1) Inversion de contrôle et Injection des dépendances
 
-## (1) Inversion de contrôle et Injection des dépendances
-
-### Partie 1 :
+## Partie 1 :
 1. Créer l'interface IDao avec une méthode getDate + implémentation
 ![](Activité%20Pratique%20N°%201/images/1.jpg)
 2. Créer l'interface IMetier avec une méthode calcul + implémentation en utilisant le couplage faible
@@ -32,5 +29,3 @@
    ###### a. Le constructeu      
    ###### b. Le Setter
    ###### c. Attribut (accès direct à l'attribut : Field)
-
-![](ayoub.jpg)
