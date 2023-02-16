@@ -9,12 +9,12 @@
 2. Créer une implémentation de cette interface 
 3. Créer l'interface IMetier avec une méthode calcul
 4. Créer une implémentation de cette interface en utilisant le couplage faible
-5. Faire l'injection des dépendances :
-5.1. Par instanciation statique
-5.2. Par instanciation dynamique   
-5.3. En utilisant le Framework Spring
-       - Version XML
-       - Version annotations
+5. Faire l'injection des dépendances
+       a. Par instanciation statique
+       b. Par instanciation dynamique   
+       c. En utilisant le Framework Spring
+              - Version XML
+              - Version annotations
        
 #### Partie 2 : Mini Projet (Framework Injection des dépendance)
 Développer un mini Framework qui permet de faire l'injection des dépendances avec ses deux version XML et Annotations
