@@ -10,7 +10,7 @@
 ![](Activité%20Pratique%20N°%201/images/2.jpg)
 3. Faire l'injection des dépendances          
    ##### a. Par instanciation statique 
-      ![](Activité%20Pratique%20N°%201/images/3.a..jpg/-black?style=flat-square&logo=c) 
+      ![](Activité%20Pratique%20N°%201/images/3.a..jpg) 
    ##### b. Par instanciation dynamique   
       ![](Activité%20Pratique%20N°%201/images/3.b..jpg)
    ##### c. En utilisant le Framework Spring
