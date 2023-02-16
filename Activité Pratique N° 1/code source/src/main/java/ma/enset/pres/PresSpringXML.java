@@ -10,7 +10,7 @@ public class PresSpringXML {
         ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
 
         IMetier metier=(IMetier) context.getBean("metier");
-        System.out.println("Resultats="+metier.calcul());
+        System.out.println("Resultats = "+metier.calcul());
 
     }
 }

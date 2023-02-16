@@ -12,15 +12,13 @@ public class MetierImpl implements IMetier {
 
     //pour faire l'injection de dépendance on utilise la notation
     @Autowired //damander à Sppring au moment on va instancier la classe "MetierImpl" cherche parmi les objets qui déja crée, si tu trouve un objet de type "IDao", tu vas me l'injecter dans le variable "dao"
-    @Qualifier("dao3") // linjecte moi l'instance dao2
+    @Qualifier("dao") // linjecte moi l'instance dao
 
     private IDao dao;
 
     @Override
     public double calcul() {
-        double tmp= dao.getData();
-        double res=tmp*540/Math.cos(tmp*Math.PI);
-        return res;
+        return Math.abs(dao.getData());
     }
 
     /*
