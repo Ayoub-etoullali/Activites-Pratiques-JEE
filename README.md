@@ -7,17 +7,17 @@
 1. Créer l'interface IDao avec une méthode getDate + implémentation
 ![](Activité%20Pratique%20N°%201/images/1.jpg)
 2. Créer l'interface IMetier avec une méthode calcul + implémentation en utilisant le couplage faible
-![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/2.jpg)
+![](Activité%20Pratique%20N°%201/images/2.jpg)
 3. Faire l'injection des dépendances          
        a. Par instanciation statique
-       ![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/3.a..jpg)
+       ![](Activité%20Pratique%20N°%201/images/3.a..jpg)
        b. Par instanciation dynamique   
-       ![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/3.b..jpg)
+       ![](Activité%20Pratique%20N°%201/images/3.b..jpg)
        c. En utilisant le Framework Spring
               - Version XML
-              ![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/3.c.1..jpg)
+              ![](Activité%20Pratique%20N°%201/images/3.c.1..jpg)
               - Version annotations
-              ![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/3.c.2..jpg)
+              ![](Activité%20Pratique%20N°%201/images/3.c.2..jpg)
 #### Partie 2 : Mini Projet (Framework Injection des dépendance)
 Développer un mini Framework qui permet de faire l'injection des dépendances avec ses deux version XML et Annotations
 Concevoir et créer un mini Framework d'injection des dépendances similaire à Spring IOC
