@@ -5,7 +5,7 @@
 
 #### Partie 1 :
 1. Créer l'interface IDao avec une méthode getDate + implémentation
-![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/1.jpg)
+![](Activité%20Pratique%20N°%201/images/1.jpg)
 2. Créer l'interface IMetier avec une méthode calcul + implémentation en utilisant le couplage faible
 ![](Activites-Pratiques-JEE/main/Activité%20Pratique%20N°%201/images/2.jpg)
 3. Faire l'injection des dépendances          
