@@ -16,7 +16,7 @@
       - Version annotations
       ![](images/3.c.2..jpg)
               
-### Partie 2 : Mini Projet (Framework Injection des dépendance)
+## Partie 2 : Mini Projet (Framework Injection des dépendance)
 - Développer un mini Framework qui permet de faire l'injection des dépendances avec ses deux version XML et Annotations
 - Concevoir et créer un mini Framework d'injection des dépendances similaire à Spring IOC
 - Le Framework doit permettre à un programmeur de faire l'injection des dépendances entre les différents composant de son application respectant les possibilités suivantes : 
