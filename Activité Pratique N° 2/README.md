@@ -2,16 +2,16 @@
 
 ## Partie 1 : Modèle Multi Threads Blocking IO (java.io)
 
-   #### Développer un serveur de Multi Thread Blocking IO de ChatServer
+   ### Développer un serveur de Multi Thread Blocking IO de ChatServer
    
    ###### la classe "Conversation"
    ![](images/2.jpg)         
    ###### Démarrer les conversations
    ![](images/1.jpg)
-   ###### La communication entre |serveur| <----> |client|
+   ####### La communication entre |serveur| <----> |client|
    ![](images/3.jpg)
    
-   #### Tester le serveur avec un client Telnet
+   ### Tester le serveur avec un client Telnet
    
    ###### I/O
    ![](images/4.jpg)
