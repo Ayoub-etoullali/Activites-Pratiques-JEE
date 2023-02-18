@@ -1,11 +1,8 @@
 # (2) Bases des systèmes distribués - Programmation Résaux
 
 ## Partie 1 : Modèle Multi Threads Blocking IO (java.io)
-
-   - 
    #### Développer un serveur de Multi Thread Blocking IO de ChatServer
    * la classe "Conversation" 
-          
             ![](images/2.jpg)
             
           * Démarrer les conversations
