@@ -8,7 +8,7 @@
    ![](images/2.jpg)         
    ###### Démarrer les conversations
    ![](images/1.jpg)
-   ####### La communication entre |serveur| <----> |client|
+   ###### La communication entre |serveur| <----> |client|
    ![](images/3.jpg)
    
    ### Tester le serveur avec un client Telnet
