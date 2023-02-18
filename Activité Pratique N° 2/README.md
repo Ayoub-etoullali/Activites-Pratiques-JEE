@@ -4,7 +4,8 @@
 
    - 
    - Développer un serveur de Multi Thread Blocking IO de ChatServer
-            *la classe "Conversation" 
+   - 
+            * la classe "Conversation" 
             ![](images/2.jpg)
             
           * Démarrer les conversations
