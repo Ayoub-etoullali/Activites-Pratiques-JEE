@@ -10,18 +10,18 @@
        
        ![](images/2.jpg) 
        
-   * Démarrer les conversations
+   * La communication entre |serveur| <----> |client|
    
-       ![](images/1.jpg)
-       
-   ###### La communication entre |serveur| <----> |client|
-   ![](images/3.jpg)
+       ![](images/3.jpg)
    
-   - Tester le serveur avec un client Telnet
-   ###### I/O
-   ![](images/4.jpg)
-   ###### new Thread => Communication |serveur| <----> |client|
-   ![](images/4.jpg)
+   #### Tester le serveur avec un client Telnet
+   * I/O
+   
+      ![](images/4.jpg)
+      
+   * new Thread => Communication |serveur| <----> |client|
+      
+      ![](images/4.jpg)
    
    #### Créer un client Java avec une interface graphique JavaFX
    
