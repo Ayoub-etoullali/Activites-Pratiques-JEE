@@ -8,7 +8,7 @@
             
    * Démarrer les conversations
        
-       ![](images/2.jpg) 
+       ![](images/1.jpg) 
        
    * La communication entre |serveur| <----> |client|
    
@@ -21,7 +21,11 @@
       
    * new Thread => Communication |serveur| <----> |client|
       
-      ![](images/4.jpg)
+      ![](images/5.jpg)
+      
+   * client Telnet
+      
+      ![](images/6.jpg)
    
    ### Créer un client Java avec une interface graphique JavaFX
    
