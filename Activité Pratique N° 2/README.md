@@ -7,10 +7,13 @@
        ![](images/2.jpg)
             
    * Démarrer les conversations
+       
        ![](images/2.jpg) 
        
-   Démarrer les conversations
-   ![](images/1.jpg)
+   * Démarrer les conversations
+   
+       ![](images/1.jpg)
+       
    ###### La communication entre |serveur| <----> |client|
    ![](images/3.jpg)
    
