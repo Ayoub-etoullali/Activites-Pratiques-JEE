@@ -26,9 +26,6 @@
 2- En utilisant les annotations   
 
 3- Possibilité d'injection via :
-   
-   a. Le constructeu      
- 
-   b. Le Setter
-   
-   c. Attribut (accès direct à l'attribut : Field)
+          a. Le constructeu      
+           b. Le Setter
+               c. Attribut (accès direct à l'attribut : Field)
