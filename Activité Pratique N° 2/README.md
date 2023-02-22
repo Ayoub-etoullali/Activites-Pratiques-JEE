@@ -4,28 +4,28 @@
    ### Développer un serveur de Multi Thread Blocking IO de ChatServer
    * la classe "Conversation" 
             
-       ![](images/2.jpg)
+       ![2](https://user-images.githubusercontent.com/92756846/220728908-d2cb612f-c02a-417e-ab68-07b85ea87dae.jpg)
             
    * Démarrer les conversations
        
-       ![](images/1.jpg) 
+       ![1](https://user-images.githubusercontent.com/92756846/220728890-fe8c3d6e-d179-4559-9b42-6f70aa38e80d.jpg) 
        
    * La communication entre |serveur| <----> |client|
    
-       ![](images/3.jpg)
+       ![3](https://user-images.githubusercontent.com/92756846/220728922-7546ca80-c652-45ee-a208-146f0ca823a1.jpg)
    
    ### Tester le serveur avec un client Telnet
    * I/O
    
-      ![](images/4.jpg)
+      ![4](https://user-images.githubusercontent.com/92756846/220728946-cc8cab54-9b7a-4ca3-9905-463ac21543a3.jpg)
       
    * new Thread => Communication |serveur| <----> |client|
       
-      ![](images/5.jpg)
+      ![5](https://user-images.githubusercontent.com/92756846/220728978-cbfd3519-0996-4589-906d-de4de17d2199.jpg)
       
    * client Telnet
       
-      ![](images/6.jpg)
+      ![6](https://user-images.githubusercontent.com/92756846/220728996-aee84afc-1331-47fc-984e-a443efb8bed7.jpg)
    
    ### Créer un client Java avec une interface graphique JavaFX
    
