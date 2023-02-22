@@ -1,0 +1,2 @@
+logger.example.ma.enset.injectinator.Logger, logger.example.ma.enset.injectinator.DefaultLogger
+logger.example.ma.enset.injectinator.AnotherLogger, logger.example.ma.enset.injectinator.ExtraLogger
