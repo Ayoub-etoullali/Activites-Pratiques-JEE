@@ -28,7 +28,19 @@
       ![6](https://user-images.githubusercontent.com/92756846/220728996-aee84afc-1331-47fc-984e-a443efb8bed7.jpg)
    
    ### Créer un client Java avec une interface graphique JavaFX
+   * Scene
    
+   ![image](https://user-images.githubusercontent.com/92756846/220988426-4db1ac9c-6bc2-4024-88e2-90954ab80a60.png)
+   ![image](https://user-images.githubusercontent.com/92756846/220988521-71711c87-9643-4b37-93dd-6a7746fda6aa.png)
+   
+   * setOnAction() de la button <Connecter> + Démarrer un Thread
+   
+   ![image](https://user-images.githubusercontent.com/92756846/220989114-197a2a6f-e04b-4fed-8bb1-87a5c507af42.png)
+
+   * L'Interface graphique
+   
+   ![image](https://user-images.githubusercontent.com/92756846/220989780-1aa1a913-8050-4719-b2fb-9f959dfd3567.png)
+
    ### Créer un client Python ou un autre langage quelconque
       
 ## Partie 2 : Modèle Single Thread avec Non Blocking IO (java.nio)
