@@ -8,7 +8,7 @@ public class MyTelnet {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
-            Socket socket = new Socket("localhost", 4);
+            Socket socket = new Socket("localhost", 5);
 
             InputStream is = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(is); //read one caracter

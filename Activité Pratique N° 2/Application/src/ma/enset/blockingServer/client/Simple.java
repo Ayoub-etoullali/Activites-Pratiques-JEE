@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Simple {
     public static void main(String[] args) throws IOException {
 
-        Socket socket=new Socket("localhost",1);
+        Socket socket=new Socket("localhost",5);
         Scanner scanner=new Scanner(System.in);
 
         InputStream is=socket.getInputStream();
