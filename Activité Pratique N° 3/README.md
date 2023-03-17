@@ -29,7 +29,11 @@
 ![src](https://user-images.githubusercontent.com/92756846/226070818-4802f100-cd15-4ee6-90a0-e587403e7685.png)
 
 ## Demo
-https://user-images.githubusercontent.com/92756846/226071091-abd8861b-b154-4e34-abfe-a8e3e5c67411.mp4
-<p><sup><strong>Vidéo</strong> JPA, Hibernate, Spring Data</sup></p>
+<div align="center">
+       https://user-images.githubusercontent.com/92756846/226071091-abd8861b-b154-4e34-abfe-a8e3e5c67411.mp4
+       <p>
+       <sup>  <strong>Vidéo</strong> JPA, Hibernate, Spring Data</sup>
+       </p>
+</div>
 
 <kbd>Ayoub ETOULLALI</kbd>
