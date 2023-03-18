@@ -10,13 +10,13 @@ L'application doit permettre les fonctionnalités suivantes :
    ***
 
 ## Projet
-![image](https://user-images.githubusercontent.com/92756846/226129930-f9947230-2b44-442d-8c35-2a20766d92d5.png)
+![image](https://user-images.githubusercontent.com/92756846/226145959-5837002a-af63-40fb-a4ac-665f2cc2437b.png)
 
 ## Diagramme
-![patient](https://user-images.githubusercontent.com/92756846/226130025-73b8291a-411a-429d-aa9f-32a4371b5b0a.png)
+![patient](https://user-images.githubusercontent.com/92756846/226146018-3fc86930-29ca-4a05-9467-bc1b449b59e3.png)
 
 ## Demo
-https://user-images.githubusercontent.com/92756846/226130470-03087446-b291-4949-bee0-e9cbe9a2fc5d.mp4
+https://user-images.githubusercontent.com/92756846/226146101-aef1e376-2a4f-46cd-8b29-19021db36f4f.mp4
 <div align="center">
        <p>
        <sup>  <strong>Vidéo -</strong> Spring MVC JPA Hibernate Spring Data Thymeleaf</sup>
