@@ -17,7 +17,7 @@ public class PatientApplication {
         SpringApplication.run(PatientApplication.class, args);
     }
 
-    @Bean
+    //@Bean //au démarrage exécute moi cette méthode
     CommandLineRunner commandLineRunner(PatientRepository patientRepository){
         return args -> {
 
