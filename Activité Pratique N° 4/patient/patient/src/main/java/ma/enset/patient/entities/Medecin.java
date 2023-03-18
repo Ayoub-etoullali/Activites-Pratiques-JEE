@@ -1,4 +1,4 @@
-package ma.enset.hospital.entities;
+package ma.enset.patient.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -6,16 +6,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.util.Collection;
 
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor
-public class Consultation {
+@Data @NoArgsConstructor @AllArgsConstructor
+public class Medecin {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date dateConsultation;
-    private String rapportConsultation;
-    @OneToOne(mappedBy = "consultation")
+    private  String nom;
+    private  String email;
+    private  String specialite;
+    @OneToMany(mappedBy = "medecin")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private RendezVous rendezVous;
+    private Collection<RendezVous> rendezVous;
 }
