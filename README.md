@@ -9,7 +9,7 @@
 <br>
 
 <div align="center">
-![ayoub](https://user-images.githubusercontent.com/92756846/220727344-dbb21e84-4584-4055-bde5-a3c90a64a618.jpg)      width="200">
+![ayoub](https://user-images.githubusercontent.com/92756846/220727344-dbb21e84-4584-4055-bde5-a3c90a64a618.jpg)
 </div>
 
 <kbd>Enjoy Code</kbd>
