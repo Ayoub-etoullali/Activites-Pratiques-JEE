@@ -7,9 +7,7 @@
 ### (4) Spring MVC JPA Hibernate Spring Data Thymeleaf
 
 <div align="center">
-<img 
-     src="![ayoub](https://octodex.github.com/images/inflatocat.png](https://user-images.githubusercontent.com/92756846/220727344-dbb21e84-4584-4055-bde5-a3c90a64a618.jpg)"        
-     width="200">
+![ayoub](https://octodex.github.com/images/inflatocat.png](https://user-images.githubusercontent.com/92756846/220727344-dbb21e84-4584-4055-bde5-a3c90a64a618.jpg)"      width="200">
 </div>
 
 <kbd>Enjoy Code</kbd>
