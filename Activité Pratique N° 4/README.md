@@ -18,8 +18,7 @@ L'application doit permettre les fonctionnalités suivantes :
 https://user-images.githubusercontent.com/92756846/226146101-aef1e376-2a4f-46cd-8b29-19021db36f4f.mp4
 
 ## Demo
-[![Watch the video](https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/youtube-logo.png?auto=format&q=60&fit=max&w=930)]
-(https://user-images.githubusercontent.com/92756846/226146101-aef1e376-2a4f-46cd-8b29-19021db36f4f.mp4)
+[![Watch the video](https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/youtube-logo.png?auto=format&q=60&fit=max&w=930)](https://user-images.githubusercontent.com/92756846/226146101-aef1e376-2a4f-46cd-8b29-19021db36f4f.mp4)
 
 <div align="center">
        <p>
