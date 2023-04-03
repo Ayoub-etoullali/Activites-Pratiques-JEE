@@ -1,7 +1,5 @@
 # (5) Web services SOAP WSDL UDDI
 
-[Activité pratique N°1 - Web services Soap WSDL.pdf](https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/files/11138110/Activite.pratique.N.1.-.Web.services.Soap.WSDL.pdf)
-
 ## Application
 1. Créer un Web service qui permet de : 
        • Convertir un montant de l’auro en DH
@@ -18,6 +16,7 @@
 
 ## Demo
 https://user-images.githubusercontent.com/92756846/229505818-5456ed28-7a5b-4d90-b24b-37a3741f63e2.mp4
+
 <div align="center">
        <p>
        <sup>  <strong>Vidéo -</strong>  Web services SOAP WSDL UDDI</sup>
