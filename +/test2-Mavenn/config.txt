@@ -1,0 +1,2 @@
+ma.enset.extension.DaoImplVWS
+ma.enset.metier.MetierImpl
