@@ -1,4 +1,4 @@
-# (2) JPA, Hibernate, Spring Data
+# (3) JPA, Hibernate, Spring Data
 
 ## Activité :
 1. Installer IntelliJ Ultimate
