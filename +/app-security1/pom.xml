@@ -79,7 +79,20 @@
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
 			<version>3.1.0.M1</version>
 		</dependency>
-
+		<!-- si fait un modification => vous etes obligé de redémarrer -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity6 -->
+		<!-- pour afficher l'utilisateur qui est auth -->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+			<version>3.1.0.M1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
