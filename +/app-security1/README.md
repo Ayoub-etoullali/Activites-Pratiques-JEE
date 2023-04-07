@@ -12,12 +12,10 @@ L'application doit permettre les fonctionnalités suivantes :
 ## Demo
 ![image](https://user-images.githubusercontent.com/92756846/226191936-9f81895e-b2f4-40f0-8020-f978365bb73a.png)
 
+https://user-images.githubusercontent.com/92756846/230534987-171d520c-26a8-4486-8f15-9c7ffb9b5214.mp4
 
 <div align="center">
        <p>
-
-https://user-images.githubusercontent.com/92756846/230534987-171d520c-26a8-4486-8f15-9c7ffb9b5214.mp4
-
        <sup>  <strong>Vidéo -</strong> Spring Security 6</sup>
        </p>
 </div>
