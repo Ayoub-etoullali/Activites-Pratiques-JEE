@@ -1,5 +1,6 @@
 package ma.enset.patient.security;
 
+import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -20,10 +21,20 @@ public class SecurityConfig {
     //users
     @Bean
     public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
+
+        String password="1234";
+        String encodedPWD=passwordEncoder().encode(password);
+        System.out.println("-----------------------------");
+        System.out.println(encodedPWD);
+        System.out.println("-----------------------------");
+
+        // [N.B] Authentification depuis base de donnée
+        // vidéo : Part 3 - Spring Boot Spring MVC Thymeleaf- Spring Securiry (1h19min)
+
         return new InMemoryUserDetailsManager(
-                User.withUsername("ayoub").password(passwordEncoder().encode("1234")).roles("USER").build(), //d'une manière simple on utilise "{noop}1234" | <noop> cad pas utiliser encoder (hash)
-                User.withUsername("Rado").password(passwordEncoder().encode("1234")).roles("USER").build(),
-                User.withUsername("admin").password(passwordEncoder().encode("1234")).roles("USER","ADMIN").build()
+                User.withUsername("ayoub").password(passwordEncoder().encode(password)).roles("USER").build(), //d'une manière simple on utilise "{noop}1234" | <noop> cad pas utiliser encoder (hash)
+                User.withUsername("Rado").password(passwordEncoder().encode(password)).roles("USER").build(),
+                User.withUsername("admin").password(passwordEncoder().encode(password)).roles("USER","ADMIN").build()
         );
     }
 
