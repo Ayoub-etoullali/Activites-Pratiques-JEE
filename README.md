@@ -12,7 +12,9 @@
 <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Activit%C3%A9%20Pratique%20N%C2%B0%204">
   (4) Spring MVC JPA Hibernate Spring Data Thymeleaf </a> <br>
   <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Activit%C3%A9%20Pratique%20N%C2%B0%205">
-  (5) Web services SOAP WSDL UDDI </a>
+  (5) Web services SOAP WSDL UDDI </a> <br>
+  <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Activit%C3%A9%20Pratique%20N%C2%B0%206">
+  (6) Mise en oeuvre d'un micro-service </a>
 
   <br><br>
 
