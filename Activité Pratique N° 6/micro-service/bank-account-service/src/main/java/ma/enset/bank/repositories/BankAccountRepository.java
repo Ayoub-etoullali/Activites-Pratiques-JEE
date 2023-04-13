@@ -9,7 +9,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.List;
 
-//[M2 : Spring Data Rest]
+//[M2 : Spring Data Rest] : l'ajoute de l'annotation @RepositoryRestResource
 @RepositoryRestResource //(maven -> rest) cad demandé à Spring au démarrage, démarre un Web Service RESTfull qui permet de gérer l'entité de type "BankAccount" => auto : créer GET PUT POST... par défaut
 public interface BankAccountRepository extends JpaRepository<BankAccount,String> {
     @RestResource(path = "/byType")

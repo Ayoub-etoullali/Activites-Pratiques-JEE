@@ -1,0 +1,31 @@
+#tout les requetes de GraphQL c'est du POST
+#[M3] pour résoudre le problème de boucle infini
+
+type Query{
+    accountsList : [BankAccount],
+    accountById(id:String) : BankAccount,
+    customers : [Customer]
+}
+type Mutation{
+    addAccount(bankAccount:BankAccountDTO) : BankAccount,
+    updateAccount(id:String,bankAccount:BankAccountDTO) : BankAccount,
+    deleteAccount(id:String) : String
+}
+type Customer{
+    id : Float,
+    name : String,
+    accounts : [BankAccount]
+}
+type BankAccount{
+    id : String,
+    createdAt : Float,
+    balance : Float,
+    currency : String,
+    type : String,
+    customer : Customer
+}
+input BankAccountDTO{
+    balance : ID, #ou Float
+    currency : String,
+    type : String
+}

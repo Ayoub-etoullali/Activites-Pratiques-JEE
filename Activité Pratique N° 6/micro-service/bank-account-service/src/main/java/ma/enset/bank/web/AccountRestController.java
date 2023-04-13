@@ -13,7 +13,8 @@ import java.util.List;
 
 //[M1 : RestController]
 @RestController
-@RequestMapping("/api") //il faut écrire d'abord "/api" avant pour aller à cette Web Service
+@RequestMapping("/api") //il faut écrire d'abord "/api" avant pour aller à cette Web Service && [M1] pour résoudre le problème de boucle infini => utiliser DTO
+
 public class AccountRestController {
     private BankAccountRepository bankAccountRepository;
     private AccountService accountService; // pour la Version DTO

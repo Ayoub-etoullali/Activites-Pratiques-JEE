@@ -5,4 +5,5 @@ import ma.enset.bank.dto.BankAccountResponseDTO;
 
 public interface AccountService{
     public BankAccountResponseDTO addAccount(BankAccountRequestDTO bankAccountDTO);
+    public BankAccountResponseDTO updateAccount(String id,BankAccountRequestDTO bankAccountDTO);
 }
