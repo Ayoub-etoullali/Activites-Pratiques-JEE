@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-                layout:decorate="template1">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1">
 <head>
     <meta charset="UTF-8">
     <title>Patients</title>
     <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 </head>
 <body>
-    <div layout:fragment="content1">
-        <div class="container mt-2">
-            <div class="card">
-                <div class="card-header">Liste des patients</div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>ID</th> <th>NOM</th> <th>Date Naissance</th> <th>Malade</th> <th>Score</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr th:each="p:${listePatients}">
-                            <td th:text="${p.id}"></td> <!-- use p.id ou p.getId()-->
-                            <td th:text="${p.nom}"></td>
-                            <td th:text="${p.dateNaissance}"></td>
-                            <td th:text="${p.malade}"></td>
-                            <td th:text="${p.score}"></td>
-                            <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
-                                <a onclick=" return confirm('sur ?')" class="btn btn-danger" th:href="@{/admin/delete(id=${p.id},keyword=${keyword},page=${pageCurrent})}">
-                                    Delete
-                                </a>
-                            </td>
-                            <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
-                                <a class="btn btn-success" th:href="@{/admin/editPatient(id=${p.id},keyword=${keyword},page=${pageCurrent})}">
-                                    Edit
-                                </a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <ul class="nav nav-pills">
-                        <li th:each="page,status:${pages}">
-                            <a th:class="${status.index==pageCurrent?'btn btn-primary ms-1':'btn btn-outline-primary ms-1'}"
-                               th:text="${status.index}"
-                               th:href="@{/user/index(page=${status.index},keyword=${keyword})}"> <!-- keyword=${keyword} : garde keyword actuel -->
-                            </a> <!-- status : index count size(fixe) current -->
-                        </li>
-                    </ul>
-                </div>
+<div layout:fragment="content1">
+    <div class="container mt-2">
+        <div class="card">
+            <div class="card-header">Liste des patients</div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOM</th>
+                        <th>Date Naissance</th>
+                        <th>Malade</th>
+                        <th>Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="p:${listePatients}"> <!-- param -->
+                        <td th:text="${p.id}"></td> <!-- use p.id ou p.getId()-->
+                        <td th:text="${p.nom}"></td>
+                        <td th:text="${p.dateNaissance}"></td>
+                        <td th:text="${p.malade}"></td>
+                        <td th:text="${p.score}"></td>
+                        <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+                            <a onclick=" return confirm('sur ?')" class="btn btn-danger"
+                               th:href="@{/admin/delete(id=${p.id},keyword=${keyword},page=${pageCurrent})}">
+                                <!-- controller (traitement) -->
+                                Delete
+                            </a>
+                        </td>
+                        <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+                            <a class="btn btn-success"
+                               th:href="@{/admin/editPatient(id=${p.id},keyword=${keyword},page=${pageCurrent})}">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul class="nav nav-pills">
+                    <li th:each="page,status:${pages}">
+                        <a th:class="${status.index==pageCurrent?'btn btn-primary ms-1':'btn btn-outline-primary ms-1'}"
+                           th:text="${status.index}"
+                           th:href="@{/user/index(page=${status.index},keyword=${keyword})}">
+                            <!-- keyword=${keyword} : garde keyword actuel -->
+                        </a> <!-- status : index count size(fixe) current -->
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

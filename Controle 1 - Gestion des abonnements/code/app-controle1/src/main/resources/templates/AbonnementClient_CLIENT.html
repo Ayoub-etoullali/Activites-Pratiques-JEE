@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout.html"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Abonnement de Client</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content1">
+
+    <div class="alert alert-info m-3">
+
+        <h2>La liste de votre Abonnement </h2>
+
+    </div>
+    <div class="card-body">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date Abonnement</th>
+                <th>Montan tMensuel</th>
+                <th>Type Abonnement</th>
+                <th>Solde</th>
+                <th>Abonnement</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <th>1</th>
+            <th>12/12/2013</th>
+            <th>1222</th>
+            <th>9888</th>
+            <th>88899</th>
+            <td>
+                <a class="btn btn-success">
+                    Charger
+                </a>
+            </td>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+</body>
+</html>

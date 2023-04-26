@@ -17,5 +17,4 @@ public class PatientRestController {
     public List<Patient> patientList(){
         return patientRepository.findAll();
     }
-
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout.html"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Abonnement de Client</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content1">
+
+    <div class="alert alert-info m-3">
+
+        <h2>La liste des Abonnemts de client : </h2>
+        <h3 th:text="${client.nom}" th:class="text-black"></h3>
+
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>DateAbonnement</th>
+                <th>MontantMensuel</th>
+                <th>TypeAbonnement</th>
+                <th>Solde</th>
+                <th>Abonnement</th>
+                <th>Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="p:${abonnement}">
+                <td th:text="${p.getId()}"></td>
+                <td th:text="${p.getDateAbonnement()}"></td>
+                <td th:text="${p.getMontantMensuel()}"></td>
+                <td th:text="${p.getTypeAbonnement()}"></td>
+                <td th:text="${p.getSolde()}"></td>
+                <td>
+                    <a class="btn btn-success">
+                        <!--th:href="@{/client/rechargerSolde(abonnementId=${p.getId()},montant=${500} ) }"-->
+                        Charger
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-info">
+                        Modifier
+                    </a>
+                </td>
+                <td>
+                    <a onclick=" return confirm('sur ?')" class="btn btn-danger"
+                       th:href="@{/admin/deleteAbonnement(id=${p.getId()}) }">
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Clients</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content1">
+    <div class="container mt-2">
+        <div class="card">
+            <div class="card-header">Liste des clients</div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>UserName</th>
+                        <th>Les abonnements</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="p:${listClients}">
+                        <td  th:text="${p.getId()}"></td>
+                        <td  th:text="${p.getNom()}"></td>
+                        <td  th:text="${p.getEmail()}"></td>
+                        <td  th:text="${p.getUsername()}"></td>
+                        <td>
+                            <a class="btn btn-primary"
+                               th:href="@{/admin/AbonnementClient(id=${p.id})}">
+                                Voir
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn btn-success"
+                               th:href="@{/admin/editClient(id=${p.id},keyword=${keyword},page=${currentPage})}">
+                                Modifier
+                            </a>
+                        </td>
+                        <td>
+                            <a onclick=" return confirm('sur ?')" class="btn btn-danger"
+                               th:href="@{/admin/deleteClient(id=${p.id}, keyword=${keyword}, page=${currentPage}) }">
+                                Supprimer
+                            </a>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                <ul class="nav nav-pills">
+                    <li th:each="page,status:${pages}">
+
+                        <a
+                                th:class="${status.index==currentPage? 'btn btn-warning m-2':'btn btn-outline-info m-2'}"
+                                th:text="${status.index}"
+                                th:href="@{/client/index(page=${status.index},keyword=${keyword})}"
+                        ></a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
