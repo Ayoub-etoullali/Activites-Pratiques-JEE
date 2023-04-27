@@ -1,4 +1,4 @@
-# Activité Pratique 👨🏻‍💻
+# Activités Pratiques 👨🏻‍💻
 ![](https://miro.medium.com/max/647/1*PBTTH5RGrfT1RBXxr989XQ.png)
 
 ## TPs
