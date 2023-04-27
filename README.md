@@ -15,7 +15,7 @@
   <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Activit%C3%A9%20Pratique%20N%C2%B0%206">
   (6) Mise en oeuvre d'un micro-service </a>
 
-<br><br>
+<br>
 
 ![ayoub](https://user-images.githubusercontent.com/92756846/220727344-dbb21e84-4584-4055-bde5-a3c90a64a618.jpg)
 
