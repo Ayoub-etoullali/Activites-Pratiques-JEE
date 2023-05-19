@@ -14,6 +14,10 @@
   (5) Web services SOAP WSDL UDDI </a> <br>
   <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Activit%C3%A9%20Pratique%20N%C2%B0%206">
   (6) Mise en oeuvre d'un micro-service </a> <br>
+  <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Controle%201%20-%20Gestion%20des%20abonnements">
+  Controle 1 - Gestion des abonnements </a> <br>
+   <a href="https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Projet%20JEE%20%20Spring%20Angular">
+  Projet JEE Spring Angular </a> <br>
 
 <br>
 
