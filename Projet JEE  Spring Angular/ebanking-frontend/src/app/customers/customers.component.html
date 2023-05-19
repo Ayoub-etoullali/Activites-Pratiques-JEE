@@ -1,0 +1,65 @@
+<div class="container mt-2">
+  <!-- [M1] Error -->
+  <ng-container *ngIf="customers | async as listCusomers; else failureOrLoading">
+
+    <!-- [M2] Error
+      <div class="text-danger" *ngIf="errorMsg">
+        Error Message = {{errorMsg | json}}
+      </div>
+    -->
+
+    <div class="card">
+      <div class="card-header">Customers</div>
+      <div class="card-body">
+
+        <!-- Search -->
+        <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchCustomers()">
+          <div class="input-group">
+            <label class="input-group-text">Keyword</label>
+            <input type="text" formControlName="keyword" class="form-control"> <!-- Stocker dans le variable keyword de l'objet searchFormGroup -->
+            <button class="btn btn-info">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Customers -->
+        <table class="table">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          </thead>
+          <tbody class="tableb">
+          <tr *ngFor="let c of customers | async"> <!-- async : [M2] subscribe-->
+            <td> {{c.id}}</td>
+            <td> {{c.name}}</td>
+            <td> {{c.email}} </td>
+            <td>
+            <button (click)="handleDeleteCustomer(c)"  class="btn btn-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- [M1] Error -->
+  <ng-template #failureOrLoading>
+    <ng-container *ngIf="errorMsg; else loading">
+      <div class="text-danger">
+        Error Message = {{errorMsg | json}}
+      </div>
+    </ng-container>
+    <ng-template #loading>
+      <div class="text-xl-start">
+        Loading ...
+      </div>
+    </ng-template>
+  </ng-template>
+</div>

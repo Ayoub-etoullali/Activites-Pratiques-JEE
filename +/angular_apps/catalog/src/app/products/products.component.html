@@ -1,0 +1,91 @@
+<div class="container">
+
+  <nav class="p-2 m-2 border border-info">
+    <button *ngIf="authService.hasRole('ADMIN')" class="btn btn-outline-info" (click)="handleNewProduct()">New Product</button>
+  </nav>
+
+  <ng-template #errors>
+    <div class="text-bg-danger">
+      {{errorMessage}}
+    </div>
+  </ng-template>
+  <!-- other method without use template
+  <div *ngIf="errorMessage" class="text-bg-danger">
+    {{errorMessage}}
+  </div>
+  -->
+
+
+  <div class="card" *ngIf="products; else errors">
+    <div class="card-header"> Products List</div>
+    <div class="card-body">
+      <!-- Search -->
+      <!--  {{searchFormGroup.value | json}}  -->
+      <form [formGroup]="searchFormGroup" (ngSubmit)="handlSearchProduct()" class="d-flex">
+        <div class="input-group">
+          <label class="input-group-text">Search</label>
+          <input type="text" class="form-control me-2" formControlName="keyword" aria-label="Search">
+          <button class="btn btn-info">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+      <!--<form [formGroup]="searchFormGroup" (ngSubmit)="handlSearchProduct()">
+        <div class="input-group">
+          <label class="input-group-text">Keyword</label>
+          <input type="text" class="form-control" formControlName="keyword">
+          <button class="btn btn-info">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>-->
+      <table class="table">
+        <thead>
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Promotion</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.price}}</td>
+          <!-- Promotion -->
+          <td>
+            <i *ngIf="p.promotion==true" class="bi bi-toggle-on"></i>
+          </td>
+          <td *ngIf="authService.hasRole('ADMIN')">
+            <button (click)="handleSetPromotion(p)" [ngClass]="p.promotion==true?'btn-danger':'btn-success'"
+                    class="btn">
+              <span *ngIf="p.promotion==true">Off</span>
+              <span *ngIf="p.promotion==false">On</span>
+            </button>
+          </td>
+          <!-- Edit -->
+          <td *ngIf="authService.hasRole('ADMIN')">
+            <button (click)="handleEditProduct(p)" class="btn btn-info">
+              <i class="bi bi-file"></i>
+            </button>
+          </td>
+          <!-- Delete -->
+          <td *ngIf="authService.hasRole('ADMIN')">
+            <button (click)="handleDeleteProduct(p)" class="btn btn-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- Pages -->
+      <ul class="nav nav-pills">
+        <li *ngFor="let item of [].constructor(totalPages); let i=index">
+          <a (click)="goToPage(i)" [ngClass]="i==currentPage?'btn-info':'btn-outline-info'"
+             class="btn ms-1 mt-1">{{i}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

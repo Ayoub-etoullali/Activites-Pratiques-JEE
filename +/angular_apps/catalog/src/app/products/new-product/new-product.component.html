@@ -1,0 +1,28 @@
+<div class="container mt-3 col-md-6 offset-md-3">
+  <!--{{productFormGroup.controls['price'].errors | json}} : réactive form : tout ce que saisie change réactivement-->
+  <form [formGroup]="productFormGroup" (ngSubmit)="handleAddProduct()">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" formControlName="name" class="form-control"> <!-- formControlName : champ qu'on va stocker -->
+      <small *ngIf="productFormGroup.controls['name'].errors && productFormGroup.controls['name'].touched"
+             class="text-danger">
+        {{productService.getErrorMsgName('Name', productFormGroup.controls['name'].errors)}} <!-- Name is required -->
+      </small>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input type="text" formControlName="price" class="form-control">
+      <small *ngIf="productFormGroup.controls['price'].errors && productFormGroup.controls['price'].touched"
+             class="text-danger">
+        {{productService.getErrorMsgPrice('Price', productFormGroup.controls['price'].errors)}}
+        <!-- Name is required -->
+      </small>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Promotion</label>
+      <input type="checkbox" formControlName="promotion" class="form-check">
+    </div>
+    <button [disabled]="productFormGroup.invalid" type="submit" class="btn btn-info">Save</button>
+    <!-- !productFormGroup.valid => button désactiver -->
+  </form>
+</div>

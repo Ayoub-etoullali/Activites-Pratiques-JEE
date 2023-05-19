@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 5000,
+      "promotion": true
+    },
+    {
+      "id": 2,
+      "name": "Printer",
+      "price": 3000,
+      "promotion": false
+    },
+    {
+      "id": 3,
+      "name": "Smart Phone",
+      "price": 4000,
+      "promotion": true
+    }
+  ]
+}

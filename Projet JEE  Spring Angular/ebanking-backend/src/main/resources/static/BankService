@@ -1,0 +1,128 @@
+/** [Test] change between SavingAccount<-->CurrentAccount **/
+
+    @Bean
+    CommandLineRunner commandLineRunner(BankAccountRepository bankAccountRepository, BankService bankService) {
+        return args -> {
+            System.out.println("\n**********************************************\n");
+
+            /**[M1] => ça marche pas en mode LAZY ***
+            /*
+            BankAccount bankAccount = bankAccountRepository.findById("0ce1b1cb-b35a-4b26-870e-742d444984aa").orElse(null);
+            if (bankAccount != null) {
+                System.out.println("Nom de classe : " + bankAccount.getClass().getSimpleName());
+                System.out.println(bankAccount.getId());
+                System.out.println(bankAccount.getBalance());
+                System.out.println(bankAccount.getCurrency());
+                System.out.println(bankAccount.getStatus());
+                System.out.println(bankAccount.getCreatAt());
+                System.out.println(bankAccount.getCustomer().getName());
+
+                if (bankAccount instanceof SavingAccount) {
+                    System.out.println("InterestRate = " + ((SavingAccount) bankAccount).getInterestRate());
+                } else if (bankAccount instanceof CurrentAccount) {
+                    System.out.println("OverDraft = " + ((CurrentAccount) bankAccount).getOverDraft());
+                }
+
+                //Si je le met en mode LAZY, cette méthode ça marche pas, parce que il faut l'appeler par un service <BankService>
+                bankAccount.getOperations().forEach((operation -> {
+                    System.out.println(operation.getId() + "\t" + operation.getAmount() + "\t" + operation.getType() + "\t" + operation.getBankAccount() + "\t" + operation.getDate());
+                }));
+            }
+            **
+
+            /**[M2]***
+//            bankService.consulter();
+        };
+    }
+
+...........................................................................................................................
+
+package com.etoullali.services;
+
+import com.etoullali.entities.BankAccount;
+import com.etoullali.entities.CurrentAccount;
+import com.etoullali.entities.SavingAccount;
+import com.etoullali.repositories.BankAccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
+public class BankService_ForTest {
+    @Autowired
+    private BankAccountRepository bankAccountRepository;
+    public void consulter(){
+        BankAccount bankAccount = bankAccountRepository.findById("0ce1b1cb-b35a-4b26-870e-742d444984aa").orElse(null);
+        if (bankAccount != null) {
+            System.out.println("Nom de classe : " + bankAccount.getClass().getSimpleName());
+            System.out.println(bankAccount.getId());
+            System.out.println(bankAccount.getBalance());
+            System.out.println(bankAccount.getCurrency());
+            System.out.println(bankAccount.getStatus());
+            System.out.println(bankAccount.getCreatAt());
+            System.out.println(bankAccount.getCustomer().getName());
+
+            if (bankAccount instanceof SavingAccount) {
+                System.out.println("InterestRate = " + ((SavingAccount) bankAccount).getInterestRate());
+            } else if (bankAccount instanceof CurrentAccount) {
+                System.out.println("OverDraft = " + ((CurrentAccount) bankAccount).getOverDraft());
+            }
+
+            //Si je le met en mode LAZY, cette méthode ça marche pas, parce que il faut l'appeler par un service <BankService>
+            bankAccount.getOperations().forEach((operation -> {
+                System.out.println(operation.getId() + "\t" + operation.getAmount() + "\t" + operation.getType() + "\t" + operation.getBankAccount() + "\t" + operation.getDate());
+            }));
+        }
+    }
+}
+
+...........................................................................................................................
+
+    CommandLineRunner start(CustomerRepository customerRepository,
+                            AccountOperationRepository accountOperationRepository,
+                            BankAccountRepository bankAccountRepository) {
+        return args -> {
+
+            Stream.of("ayoub", "hayat", "samira", "mustapha", "karima", "radouan").forEach(name -> {
+                Customer customer = new Customer();
+                customer.setName(name);
+                customer.setEmail(name + "@gmail.com");
+                customerRepository.save(customer);
+            });
+
+            customerRepository.findAll().forEach(customer -> {
+
+                CurrentAccount currentAccount = new CurrentAccount();
+                currentAccount.setId(UUID.randomUUID().toString()); //génère d'après date de systéme => unique
+                currentAccount.setCreatAt(new Date());
+                currentAccount.setBalance(Math.random() * 10000);
+                currentAccount.setStatus(AccountStatus.CREATED);
+                currentAccount.setCurrency("DH");
+                currentAccount.setCustomer(customer);
+                currentAccount.setOverDraft(6000);
+                bankAccountRepository.save(currentAccount);
+
+                SavingAccount savingAccount = new SavingAccount();
+                savingAccount.setId(UUID.randomUUID().toString());
+                savingAccount.setCreatAt(new Date());
+                savingAccount.setBalance(Math.random() * 10000);
+                savingAccount.setStatus(AccountStatus.CREATED);
+                savingAccount.setCurrency("DH");
+                savingAccount.setCustomer(customer);
+                savingAccount.setInterestRate(5.5);
+                bankAccountRepository.save(savingAccount);
+            });
+
+            bankAccountRepository.findAll().forEach(bankAccount -> {
+                for (int i = 0; i < 10; i++) {
+                    AccountOperation accountOperation = new AccountOperation();
+                    accountOperation.setBankAccount(bankAccount);
+                    accountOperation.setAmount(Math.random());
+                    accountOperation.setType(Math.random() > 0.5 ? OperationType.DEBIT : OperationType.CREDIT);
+                    accountOperation.setDate(new Date());
+                    accountOperationRepository.save(accountOperation);
+                }
+            });
+        };
+    }
