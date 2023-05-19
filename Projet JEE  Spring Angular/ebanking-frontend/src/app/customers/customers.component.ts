@@ -50,10 +50,11 @@ export class CustomersComponent implements OnInit {
   }
 
   handleDeleteCustomer(customer: Customer) {
+    let conf=confirm("Are you sure?")
+    if (!conf) return;
     this.customersService.deleteCustomers(customer.id).subscribe({
       next: value => {
-        this.handleSearchCustomers()
-        /*
+        // [M1]
         this.customers = this.customers.pipe(
           map(data => {
             let index=data.indexOf(customer);
@@ -61,7 +62,8 @@ export class CustomersComponent implements OnInit {
             return data
           })
         );
-         */
+         // [M2] refresh
+        //this.handleSearchCustomers()
       }, error: err => {
         console.log(err)
       }

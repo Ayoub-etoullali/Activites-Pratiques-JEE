@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Customer} from "../model/customer.model";
+import {ValidationErrors} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root' //dans la racine de peojet => c'est pas mlaa peine de l'ajouter dans app.module.ts/providers
@@ -29,5 +30,21 @@ private backendHost="http://localhost:8085";
   }
   public deleteCustomers(id:number){
     return this.http.delete(this.backendHost+"/customers/"+id);
+  }
+
+  getErrorMsgName(field: string, error: ValidationErrors) {
+    if (error['required']) {
+      return field + " is required";
+    } else if (error['minlength']) {
+      return field + " should have at least " + error['minlength']['requiredLength'] + " Characters";
+    } else return "";
+  }
+
+  getErrorMsgEmail(field: string, error: ValidationErrors) {
+    if (error['required']) {
+      return field + " is required";
+    } else if (error['email']) {
+      return field + " should have a form of email ";
+    } else return "";
   }
 }
