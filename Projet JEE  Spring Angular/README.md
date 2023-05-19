@@ -1,7 +1,7 @@
 # Digital Banking
 
 ## Application
-On souhaite créer une application qui permet de gérer des comptes bancaires : <br>
+On souhaite créer une application qui permet de gérer des comptes bancaires : 
 1) chaque compte appartient à un client. <br>
 2) un compte peut subir plusieurs opérations de type DEBIT ou CREDIT. <br>
 3) Il existe deux types de comptes : Comptes courants et comptes épargnes. <br>
