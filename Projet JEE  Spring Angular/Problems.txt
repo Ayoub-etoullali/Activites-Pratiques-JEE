@@ -1,3 +1,6 @@
-1) *ngFor : of d'ont work well
+***** Backend *****
+1) Delete Method
 
+***** Frontend *****
+1) *ngFor : of d'ont work well
 2) Environnement folder  not found => for backendHost (Environement Variable)

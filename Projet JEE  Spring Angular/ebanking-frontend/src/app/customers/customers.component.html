@@ -38,9 +38,22 @@
             <td> {{c.name}}</td>
             <td> {{c.email}} </td>
             <td>
-            <button (click)="handleDeleteCustomer(c)"  class="btn btn-danger">
+              <!-- Delete -->
+            <button *ngIf="authService.hasRole('ADMIN')" (click)="handleDeleteCustomer(c)"  class="btn btn-danger">
               <i class="bi bi-trash"></i>
             </button>
+            </td>
+            <!-- Accounts -->
+            <td>
+              <button (click)="handleCustomerAccounts(c)"  class="btn btn-success">
+                Accounts
+              </button>
+            </td>
+            <!-- Update -->
+            <td>
+              <button (click)="handleUpdateCustomer(c)"  class="btn btn-info">
+                <i class="bi bi-file"></i>
+              </button>
             </td>
           </tr>
           </tbody>

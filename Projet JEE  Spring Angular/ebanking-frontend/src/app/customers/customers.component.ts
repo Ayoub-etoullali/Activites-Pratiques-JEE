@@ -1,9 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {CustomersService} from "../services/customers.service";
+import {CustomersService} from "../services/customers/customers.service";
 import {catchError, map, Observable, throwError} from "rxjs";
 import {Customer} from "../model/customer.model";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {Router} from "@angular/router";
+import {AuthenticationService} from "../services/authentication/authentication.service";
 
 @Component({
   selector: 'app-customers',
@@ -15,7 +17,7 @@ export class CustomersComponent implements OnInit {
   errorMsg!: String;
   searchFormGroup!: FormGroup;
 
-  constructor(private customersService: CustomersService, private formBuilder: FormBuilder) {
+  constructor(public  authService : AuthenticationService, private customersService: CustomersService, private formBuilder: FormBuilder,private router:Router) {
   }
 
   ngOnInit(): void {
@@ -68,5 +70,15 @@ export class CustomersComponent implements OnInit {
         console.log(err)
       }
     })
+  }
+
+
+  handleCustomerAccounts(customer: Customer) {
+    this.router.navigateByUrl("/admin/customer-accounts/"+customer.id,{state :customer});
+  }
+
+  handleUpdateCustomer(c: Customer) {
+    this.router.navigateByUrl("/admin/edit-customer/"+c.id);
+
   }
 }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Customer} from "../../model/customer.model";
-import {CustomersService} from "../../services/customers.service";
+import {CustomersService} from "../../services/customers/customers.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -28,7 +28,7 @@ export class NewCustomerComponent implements OnInit {
       next : data => {
         alert("Custumer has been successfully saved !!")
         this.newCustomerFormGroup.reset()
-        this.router.navigateByUrl("/customers")
+        this.router.navigateByUrl("/admin/customers")
       }, error : err => {
         console.log(err)
       }

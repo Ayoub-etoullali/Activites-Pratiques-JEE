@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
 import { NewProductComponent } from './products/new-product/new-product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
+import { HomeComponent } from '../../../../../Projet JEE  Spring Angular/ebanking-frontend/src/app/home/home.component';
 
 @NgModule({ //décorateur
   declarations: [
@@ -19,7 +20,8 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
     LoginComponent,
     AdminTemplateComponent,
     NewProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

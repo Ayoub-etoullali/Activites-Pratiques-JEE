@@ -3,6 +3,7 @@ package com.etoullali.web;
 import com.etoullali.dtos.*;
 import com.etoullali.entities.CurrentAccount;
 import com.etoullali.entities.SavingAccount;
+import com.etoullali.exceptions.BalanceNotSufficientException;
 import com.etoullali.exceptions.BankAccountNotFoundException;
 import com.etoullali.exceptions.CustomerNotFoundException;
 import com.etoullali.services.BankAccountService;
@@ -36,6 +37,24 @@ public class BankAccountRestController {
                                                @RequestParam(defaultValue = "0") int page,
                                                @RequestParam(name = "size",defaultValue = "5") int size) throws BankAccountNotFoundException {
         return bankAccountService.getAccountHistory(id,page,size);
+    }
+
+    @PostMapping("/accounts/debit")
+    public DebitDTO debit(@RequestBody DebitDTO debitDTO) throws BankAccountNotFoundException, BalanceNotSufficientException {
+        this.bankAccountService.debit(debitDTO.getAccountId(),debitDTO.getAmount(),debitDTO.getDescription());
+        return debitDTO;
+    }
+    @PostMapping("/accounts/credit")
+    public CreditDTO credit(@RequestBody CreditDTO creditDTO) throws BankAccountNotFoundException {
+        this.bankAccountService.credit(creditDTO.getAccountId(),creditDTO.getAmount(),creditDTO.getDescription());
+        return creditDTO;
+    }
+    @PostMapping("/accounts/transfer")
+    public void transfer(@RequestBody TransferRequestDTO transferRequestDTO) throws BankAccountNotFoundException, BalanceNotSufficientException {
+        this.bankAccountService.transfer(
+                transferRequestDTO.getAccountSource(),
+                transferRequestDTO.getAccountDestination(),
+                transferRequestDTO.getAmount());
     }
     /*
     @PostMapping("/accounts")
