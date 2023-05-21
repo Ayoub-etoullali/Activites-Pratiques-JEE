@@ -29,7 +29,7 @@ public class EbankingBackendApplication {
         SpringApplication.run(EbankingBackendApplication.class, args);
     }
     @Bean
-    CommandLineRunner commandLineRunner(BankAccountService bankAccountService, BankAccountMapperImpl mapper) {
+    CommandLineRunner commandLineRunner(BankAccountService bankAccountService) {
         return args -> {
 
             Stream.of("ayoub", "hayat", "samira", "mustapha", "karima", "radouan").forEach(name -> {
@@ -42,7 +42,7 @@ public class EbankingBackendApplication {
             bankAccountService.listCustomers().forEach(customer -> {
                 try {
                     bankAccountService.saveCurrentAccount(Math.random() * 10000, 100, customer.getId());
-                    bankAccountService.saveSavingAccount(Math.random() * 10000, 5, customer.getId());
+                    bankAccountService.saveSavingAccount(Math.random() * 120000, 5, customer.getId());
                 } catch (CustomerNotFoundException e) {
                     e.printStackTrace();
                 }
