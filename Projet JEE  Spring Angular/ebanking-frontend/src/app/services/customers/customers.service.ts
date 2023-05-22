@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   providedIn: 'root' //dans la racine de peojet => c'est pas mlaa peine de l'ajouter dans app.module.ts/providers
 })
 export class CustomersService {
-  private backendHost = "http://localhost:8085";
+  private backendHost = "http://localhost:8090";
   customers!: Array<Customer>
 
   constructor(private http: HttpClient) {
@@ -23,7 +23,7 @@ export class CustomersService {
    * values, asynchronous programming in Javascript, and also event handling processes.
    */
   public getCustomers(): Observable<Array<Customer>> {
-    return this.http.get<Array<Customer>>(this.backendHost + "/customers")
+    return this.http.get<Array<Customer>>(this.backendHost + "/customers/all")
   }
 
   public getCustomer(id: number): Observable<Customer> {
@@ -35,11 +35,11 @@ export class CustomersService {
   }
 
   public saveCustomers(customer: Customer): Observable<Customer> { // Frontend<-->Backend
-    return this.http.post<Customer>(this.backendHost + "/customers", customer);
+    return this.http.post<Customer>(this.backendHost + "/customers/add", customer);
   }
 
   public deleteCustomers(id: number) {
-    return this.http.delete(this.backendHost + "/customers/" + id);
+    return this.http.delete(this.backendHost + "/customers/delete/" + id);
   }
 
   getErrorMsgName(field: string, error: ValidationErrors) {
@@ -59,6 +59,6 @@ export class CustomersService {
   }
 
   updateCustomer(customer: Customer) {
-    return this.http.put(this.backendHost + "/customers/"+customer.id,customer);
+    return this.http.put(this.backendHost + "/customers/edit/"+customer.id,customer);
   }
 }

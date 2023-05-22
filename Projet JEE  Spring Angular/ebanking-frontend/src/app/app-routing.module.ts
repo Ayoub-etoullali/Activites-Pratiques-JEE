@@ -12,16 +12,18 @@ import {HomeComponent} from "./home/home.component";
 const routes: Routes = [
   {path: "login", component: LoginComponent},
   {path: "", component: LoginComponent},
-  {path: "admin", component: NavbarComponent, //user
+  {
+    path: "admin", component: NavbarComponent, //user
     // canActivate : [AuthenticationGuard],
-    children : [
+    children: [
       {path: "home", component: HomeComponent},
-  {path: "customers", component: CustomersComponent},
-  {path: "accounts", component: AccountsComponent},
-  {path: "new-customer", component: NewCustomerComponent},
-  {path: "edit-customer/:id", component: EditCustomerComponent},
-  {path: "customer-accounts/:id", component: CustomerAccountsComponent}
-]},
+      {path: "customers", component: CustomersComponent},
+      {path: "accounts", component: AccountsComponent},
+      {path: "new-customer", component: NewCustomerComponent},
+      {path: "edit-customer/:id", component: EditCustomerComponent},
+      {path: "customer-accounts/:id", component: CustomerAccountsComponent}
+    ]
+  },
 ];
 
 @NgModule({

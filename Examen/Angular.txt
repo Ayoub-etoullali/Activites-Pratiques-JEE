@@ -1,0 +1,37 @@
+npm install -g @angular/cli
+
+ng new 'AppName'
+
+ng serve
+
+npm install bootstrap --save
+
+npm install bootstrap-icons --save 
+
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "bootstrap-icons/font/bootstrap-icons.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ]
+
+ng g c 'componentName' --> app.module
+
+ng g s services/'serviceName'
+
+__Model__ 
+''.model.ts
+________
+
+___Frontend <--> Backend___
+	service
+	handle
+	backend
+______________________
+
+____________N.B_______________
+1) ReactiveFormsModule --> app.module
+2) app routing for navigation
+______________________________

@@ -1,6 +1,6 @@
 <div class="container mt-2">
   <!-- [M1] Error -->
-  <ng-container *ngIf="customers | async as listCusomers; else failureOrLoading">
+  <ng-container *ngIf="vols | async as listCusomers; else failureOrLoading">
 
     <!-- [M2] Error
       <div class="text-danger" *ngIf="errorMsg">
@@ -13,7 +13,7 @@
       <div class="card-body">
 
         <!-- Search -->
-        <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchCustomers()">
+        <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchVols()">
           <div class="input-group">
             <label class="input-group-text">Keyword</label>
             <input type="text" formControlName="keyword" class="form-control">
@@ -29,33 +29,38 @@
           <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
+            <th>Nom</th>
+            <th>date Depart</th>
+            <th>date Arrivee</th>
           </tr>
           </thead>
           <tbody class="tableb">
-          <tr *ngFor="let c of customers | async"> <!-- async : [M2] subscribe-->
+          <tr *ngFor="let c of vols | async"> <!-- async : [M2] subscribe-->
             <td> {{c.id}}</td>
-            <td> {{c.name}}</td>
-            <td> {{c.email}} </td>
+            <td> {{c.nom}}</td>
+            <td> {{c.dateDepart}} </td>
+            <td> {{c.dateArrivee}} </td>
             <td>
-              <!-- Delete -->
-              <button *ngIf="authService.hasRole('ADMIN')" (click)="handleDeleteCustomer(c)" class="btn btn-danger">
+              <!-- Delete ->
+              <button *ngIf="authService.hasRole('ADMIN')" (click)="handleDeleteVols(c)" class="btn btn-danger">
                 <i class="bi bi-trash"></i>
               </button>
             </td>
-            <!-- Accounts -->
+
+            -- Accounts ->
             <td>
               <button (click)="handleCustomerAccounts(c)" class="btn btn-success">
                 Accounts
               </button>
             </td>
-            <!-- Update -->
+
+            -- Update ->
             <td>
               <button (click)="handleUpdateCustomer(c)" class="btn btn-info">
                 <i class="bi bi-file"></i>
               </button>
             </td>
+            -->
           </tr>
           </tbody>
         </table>

@@ -8,7 +8,7 @@ import {AccountDetails} from "../../model/account.model";
 })
 export class AccountsService {
 
-  private backendHost="http://localhost:8085"
+  private backendHost="http://localhost:8090"
   constructor(private http : HttpClient) { }
 
   public getAccount(accountId : string, page : number, size : number):Observable<AccountDetails>{
