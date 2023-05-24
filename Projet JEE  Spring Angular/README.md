@@ -1,6 +1,6 @@
 # Application de gestion des comptes bancaires
 
-Ce projet met en place une application de gestion des comptes bancaires utilisant Spring Boot, Angular, Spring Security et JWT. L'application permet aux utilisateurs de gérer leurs comptes, d'effectuer des opérations de débit et de crédit, le tout de manière sécurisée.
+Ce projet met en place une application de gestion des comptes bancaires utilisant Spring Boot, Angular, Spring Security. L'application permet aux utilisateurs de gérer leurs comptes, d'effectuer des opérations de débit et de crédit, le tout de manière sécurisée.
 
 On souhaite créer une application qui permet de gérer des comptes bancaires : 
 1) chaque compte appartient à un client. <br>
@@ -25,12 +25,12 @@ Suivez ces étapes pour exécuter l'application localement :
 ### Clonage du projet
 
 ```
-git clone https://github.com/votre-utilisateur/nom-du-projet.git
+git clone https://github.com/Ayoub-etoullali/Activites-Pratiques-JEE/tree/main/Projet%20JEE%20%20Spring%20Angular?authuser=1
 ```
 
 ### Configuration de la base de données
 
-Assurez-vous d'avoir une base de données compatible (MySQL, PostgreSQL, etc.) en cours d'exécution. Dans le fichier "application.properties" (ou "application.yml"), configurez les informations de connexion à la base de données.
+Assurez-vous d'avoir une base de données compatible (MySQL, PostgreSQL, etc.) en cours d'exécution. Dans le fichier "application.properties", configurez les informations de connexion à la base de données.
 
 ### Compilation et exécution du backend
 
@@ -41,7 +41,7 @@ Assurez-vous d'avoir une base de données compatible (MySQL, PostgreSQL, etc.) e
 mvn spring-boot:run
 ```
 
-3. Le backend sera accessible à l'adresse : http://localhost:8080
+3. Le backend sera accessible à l'adresse : http://localhost:8085
 
 ### Installation des dépendances frontend
 
