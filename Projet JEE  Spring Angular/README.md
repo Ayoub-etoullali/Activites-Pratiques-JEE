@@ -18,8 +18,6 @@ On souhaite créer une application qui permet de gérer des comptes bancaires :
 #### Partie 4 : Frontend Angular
 #### Partie 5 : Sécurité avec Spring Security et JWT
 
-***
-
 ## Installation
 
 Suivez ces étapes pour exécuter l'application localement :
